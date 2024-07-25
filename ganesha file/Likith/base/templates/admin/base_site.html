@@ -1,0 +1,28 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<h1>Welcome to My Custom Admin</h1>
+<div id="content-main">
+    <div class="app-list">
+        {% for app in app_list %}
+        <div class="app-{{ app.app_label }} module">
+            <table>
+                <caption>
+                    <a href="{{ app.app_url }}">{{ app.name }}</a>
+                </caption>
+                <tbody>
+                    {% for model in app.models %}
+                    <tr class="model-{{ model.object_name|lower }}">
+                        <th scope="row">
+                            <a href="{{ model.admin_url }}">{{ model.name }}</a>
+                        </th>
+                        <td>{{ model.admin_url }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

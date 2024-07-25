@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<style>
+
+    body.dark .btn-primary {
+        background-color: #343a40;
+        border-color: #343a40;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+</style>
+
+<section class="p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 bsb-tpl-bg-platinum">
+        <div class="d-flex flex-column justify-content-between h-100 p-3 p-md-4 p-xl-5">
+          <h3 class="m-0">Welcome!</h3>
+          <img class="img-fluid rounded mx-auto my-4" loading="lazy" src="https://rsvpify.com/wp-content/uploads/2021/06/Custom-Question-Customization.png" width="500" height="100" alt="BootstrapBrain Logo">
+          <p>Explore more into the application by signing in!! </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              <h3 class="text-center mb-4" style="color:blue;">Register</h3>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  {{ user_form.username.label_tag }}
+                  {{ user_form.username }}
+                </div>
+                <div class="form-group col-md-6">
+                  {{ user_form.email.label_tag }}
+                  {{ user_form.email }}
+                </div>
+              </div>
+              <div class="form-group">
+                {{ user_form.password1.label_tag }}
+                {{ user_form.password1 }}
+              </div>
+              <div class="form-group">
+                {{ user_form.password2.label_tag }}
+                {{ user_form.password2 }}
+              </div>
+              <div class="form-group">
+                {{ profile_form.name.label_tag }}
+                {{ profile_form.name }}
+              </div>
+              <div class="form-group">
+                {{ profile_form.address.label_tag }}
+                {{ profile_form.address }}
+              </div>
+              <div class="form-group">
+                {{ profile_form.website_link.label_tag }}
+                {{ profile_form.website_link }}
+              </div>
+              <div class="form-group">
+                {{ profile_form.description.label_tag }}
+                {{ profile_form.description }}
+              </div>
+              <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body.dark p {
+        color: Orange;
+      }
+      body.dark li{
+        color: Orange;
+      }
+</style>
+<!-- Content Section -->
+<div class="container">
+    <!-- Cards Section -->
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1494812295/photo/teamwork-manager-portrait-and-diversity-of-office-team-happy-about-hr-collaboration-we-are.webp?b=1&s=170667a&w=0&k=20&c=6cnpg7ioJ30NQhl4Aq2uloQyHZqQsitSM08x1DsMdFM=" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>About Us</b></h5>
+                    <p class="card-text">Welcome to Vendor Management Application, your trusted platform for efficient vendor management solutions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/64e90445ce261a70084af6c1/Business-team-high-fives--aligning-with-their-mission-of-teamwork-/960x0.jpg?format=jpg&width=960" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Our Mission </b></h5>
+                    <p class="card-text">At Vendor Management Application, our mission is to simplify and streamline the process of managing vendors for businesses of all sizes. We aim to provide innovative tools and solutions that enhance efficiency and collaboration.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/proxy/eZLLPRmjQiqnKKaYI4ltbUkKGqI2dozJ4eyZ8aLxfrOS8MfdvrFOkzLATwIKdbsOrtNx5_Of64exqQDds6qhnd2NwL2m3UDdSKJIGUMTnQclF1k5OcSy4g" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> <b>Our Values </b></h5>
+                    
+                        <li><strong>Customer Satisfaction:</strong> We prioritize the needs and satisfaction of our customers.</li>
+                        <li><strong>Innovation:</strong> We are committed to continuous innovation and improvement.</li>
+                        <li><strong>Integrity:</strong> We uphold the highest standards of integrity in everything we do.</li>
+                        <br> <br> <br><br>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team">
+        <h3>Our Team</h3>
+
+        <div class="team-member">
+            <div>
+                <h3>John Doe</h3>
+                <img src="https://i.pinimg.com/originals/52/f2/4a/52f24a86dd45158e8435842506819e61.jpg" height="70" alt="John Doe">
+                <p>Co-Founder & CEO</p>
+                <p>John is a visionary leader with a passion for technology and innovation.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div>
+                <h3>Jane Smith</h3>
+                <img src="https://cdn.imgbin.com/25/7/0/imgbin-animated-film-video-person-tennis-woman-JTGyDe7h8dj72JsDSqFZRFmui.jpg" height="80" alt="Jane Smith">
+                <p>Chief Technology Officer</p>
+                <p>Jane leads our technology team, driving product development and strategy.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

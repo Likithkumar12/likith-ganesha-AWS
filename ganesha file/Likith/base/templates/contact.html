@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+   
+    .contact-form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form h1 {
+      margin-bottom: 1.5rem;
+    }
+    .contact-form .form-control {
+      margin-bottom: 1rem;
+    }
+    .contact-form button {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="contact_form" name="contact_form" method="post" class="contact-form">
+          <h1>Contact Form</h1>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="first_name">First Name</label>
+              <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="last_name">Last Name</label>
+              <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email_addr">Email address</label>
+              <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email" placeholder="name@example.com">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phone_input">Phone</label>
+              <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="phone" placeholder="Phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}
